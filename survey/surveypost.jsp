@@ -16,11 +16,12 @@
             </span>
         </center>
     </h1>
-    <h3>            
+    <h3>
         <center>
             <%
                 String strName=request.getParameter("name");
-                out.println("user ID :" + strName + ", ");
+                String strDate=request.getParameter("date");
+                out.println("user ID :" + strName + ", " + strDate + "자로");
             %>
             설문조사가 완료되었습니다.
         </center>
