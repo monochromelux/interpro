@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>설문조사</title>
+    <title>기숙사 만족도 설문조사</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="author" content="Lee Hyoeun">
 </head>
 <body>
-    <h2><center><span style="background-color: #FFFF00;"> < 기숙사 만족도 설문조사 > </center></span></h2>
-    <form action="survey2.html" method="POST">
-        <h3>당신의 성별은 무엇입니까?</h3> 
-        <input type="radio" name="sex" value="male" checked>남자
-        <input type="radio" name="sex" value="female">여자
+    <h2>
+        <center>
+            <span style="background-color: #FFFF00;">
+                < 기숙사 만족도 설문조사 >
+            </span>
+        </center>
+    </h2>
         <p></p>
-        <h3>당신은 몇 학년입니까?</h3>
-        <input type="radio" name="year" value="1" checked>1학년
-        <input type="radio" name="year" value="2">2학년
-        <input type="radio" name="year" value="3">3학년
-        <input type="radio" name="year" value="4">4학년
+        <strong><center>
+            <img src="dorm.JPG" title="생활관 이미지" align="center" width=20% height=10%> <br>
+            <p></p>
+            이 설문조사는 기숙사 관생들의 생활 만족도를 알아보기 위한 조사입니다. <br>
+            앞으로의 운영에 참고가 될 예정이므로 정확히 작성 해 주시기 바랍니다.
+            <p></p>
+        </strong></center>
+    <form action="survey2.html" method="POST">
+        <fieldset>
+            <h3> 1. 이전에 본교 기숙사(효민, 행복)에서 며칠 정도 생활하였습니까?</h3>
+            <input type="radio" name="live" value="1" checked>이번이 처음이다.
+            <input type="radio" name="live" value="2">한 학기 ~ 1년
+            <input type="radio" name="live" value="3">1년 ~ 2년
+            <input type="radio" name="live" value="4">2년 이상
+            <p></p>
+            <h3> 2. 본교 기숙사의 첫인상은 어떠했습니까?</h3>
+            <input type="radio" name="firstimpression" value="1" checked>매우 별로다.
+            <input type="radio" name="firstimpression" value="2">별로다.
+            <input type="radio" name="firstimpression" value="3">보통이다.
+            <input type="radio" name="firstimpression" value="4">좋다.
+            <input type="radio" name="firstimpression" value="4">매우 좋다.
+            <p></p>
+            <h3> 3. 본교 기숙사의 현재 인상은 어떻습니까?</h3>
+            <input type="radio" name="nowimpression" value="1" checked>매우 별로다.
+            <input type="radio" name="nowimpression" value="2">별로다.
+            <input type="radio" name="nowimpression" value="3">보통이다.
+            <input type="radio" name="nowimpression" value="4">좋다.
+            <input type="radio" name="nowimpression" value="4">매우 좋다.
+            <center>
+                <p></p>
+                <input type="submit" value="다음">
+                <input type="reset" value="다시작성">
+            </center>
+        </fieldset>
         <p></p>
         <hr size="3" align="center" width=90% noshade="noshade"></hr>
         <center>
             <p></p>
-            <input type="submit" value="전송">
-            <input type="reset" value="다시작성">
-            <p></p>
-            <h5>설문조사 진행율</h5> 
-            <progress value="33" max="100" title="진행율">33%</progress><br>
+            <h5>설문조사 진행율</h5>
+            <progress value="33" max="100" title="진행율">33%</progress>
+            <br>
         </center>
     </form>
     <footer>
         <p>
-        <center><small>
-            Copyright &copy; 2018 Hyoeun Lee
-        </center></small>
+            <center>
+                <small>
+                    Copyright &copy; 2018 Hyoeun Lee
+                </small>
+            </center>
         </p>
     </footer>
 </body>
