@@ -1,3 +1,10 @@
+<!--
+    survey3.html
+    작성시작 18-04-09
+    최종수정 18-04-11
+    기숙사 만족도 설문조사 제작(세번째 페이지)
+    작성자 이효은
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,15 +21,21 @@
         </center>
     </h1>
     <form action="surveypost.jsp" method="POST">
-        <fieldset><article><ul>
+        <fieldset><article><ul> <!-- 설문 문항들을 폼 그룹으로 묶는다. 
+                                    앞의 문항들과 달리 순서가 없는 목록을 만든다. -->
             <center><strong>
                 인적사항을 입력해 주세요.
                 기숙사 관생이 아니거나, 입력해주신 인적사항과 일치하지 않을 시 설문이 반영되지 않습니다.
                 이 점 유의해 주세요.
             </strong></center><br>
-            <h3><li>본인의 학번을 입력해주세요.</li></h3>
+            <h3><li>본인의 학번을 입력해주세요.</li></h3> <!-- 번호가 아닌 점으로 목록이 만들어진다. -->
+            <!-- text 타입으로 생성하여 자유롭게 입력 가능하다. 입력창의 길이는 15px.
+                아무것도 입력하지 않으면 희미하게 "학번을 입력하세요"란 글씨가 나타난다.
+                일반적으로 공백은 중복해서 반영되지 않기 때문에,
+                입력창의 위치를 조절하기 위해 &nbsp;가 사용되었다. 변수이름은 name-->
             <p>&nbsp;&nbsp;&nbsp;<input type="text" name="name" size="15" placeholder="학번을 입력하세요"></p>
             <h3><li>현재 어떤 기숙사에 살고 계십니까?</li></h3>
+            <!-- 여러 항목을 그룹으로 묶어 목록을 만든다. 변수 이름은 dorm -->
             &nbsp;&nbsp;&nbsp;<select name="dorm">
                     <optgroup label="효민생활관">
                         <option value="1">제 1기숙사</option>
@@ -35,16 +48,20 @@
             </select>
             <p></p>
             <h3><li>성별은 무엇입니까?</li></h3>
+            <!-- 라디오 버튼 타입 문항들을 만든다. 변수이름은 sex -->
             <input type="radio" name="sex" value="male">남자
             <input type="radio" name="sex" value="female">여자
             <p></p>
             <h3><li>현재 몇 학년입니까?</li></h3>
+            <!-- 라디오 버튼 타입 문항들을 만든다. 변수이름은 year -->
             <input type="radio" name="year" value="1">1학년
             <input type="radio" name="year" value="2">2학년
             <input type="radio" name="year" value="3">3학년
             <input type="radio" name="year" value="4">4학년
             <p></p>
             <h3><li>소속된 단과대학을 입력해주세요.</li></h3>
+            <!-- 일반적인 텍스트 입력창과 다르게 입력 시 datalist에 있는 항목들이 자동완성되어 나온다.
+                변수 이름은 college. -->
             &nbsp;&nbsp;&nbsp;<input type="text" list="collegelist" name="college">
             <datalist id="collegelist">
                 <option value="인문사회과학대학"></option>
@@ -58,6 +75,8 @@
             </datalist>
             <p></p>
             <h3><li>설문 날짜를 입력해주세요.</li></h3>
+            <!-- 현재의 "년-월-일"을 입력할 수 있게 한다. 범위는 min부터 max까지. 
+                변수 이름은 date. -->
             &nbsp;&nbsp;<input type="date" name="date" min="1990-02-01" max="2024-12-31">
             <p></p>
             <center>
@@ -71,6 +90,7 @@
         <center>
             <p></p>
             <h5>설문조사 진행율</h5>
+            <!-- 설문조사의 진행률을 표시하는 태그, 총 3페이지 중 3페이지이므로 100% 진행되었다. -->
             <progress value="100" max="100" title="3/3">100%</progress>
             <p></p>
             <a href="https://dorm.deu.ac.kr/">홈페이지로 돌아가기</a>

@@ -1,53 +1,76 @@
+<!--
+    survey1.html
+    작성시작 18-04-06
+    최종수정 18-04-11
+    기숙사 만족도 설문조사 제작(첫번째 페이지)
+    작성자 이효은
+-->
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- 타이틀 설정 -->
     <title>기숙사 만족도 설문조사</title>
+    <!-- HTML5 메타정보(인코딩, 작성자 정보 기록) -->
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="author" content="Lee Hyoeun">
 </head>
 <body>
-    <h1>
-        <center>
+    <h1> <!-- 제목 사이즈 중 가장 큰 사이즈로 설정 -->
+        <center> <!-- 글을 페이지 중앙에 배치 -->
             <span style="background-color: #FFFF00;">
                 < 기숙사 만족도 설문조사 >
-            </span>
+            </span> <!-- 인라인(inline) 형식으로 분할하여 글이 적혀진 부분만 바탕색을 노란색으로 입혀줌 -->
         </center>
     </h1>
-        <p></p>
-        <strong><center>
+        <p></p> <!-- 문단 바꿈 -->
+        <strong><center> <!-- 글 강조 + 글을 페이지 중앙에 배치 -->
+            <!-- 같은 디랙토리 안의 dorm.jpg을 불러와 배치, 크기는 300x200으로 고정시킨다. -->
             <img src="dorm.jpg" title="생활관 이미지" style="width:300px;height:200px">
-            <p>이 설문조사는 기숙사 관생들의 생활 만족도를 알아보기 위한 조사입니다.<br>
+            <p>이 설문조사는 기숙사 관생들의 생활 만족도를 알아보기 위한 조사입니다.<br> <!-- 줄 바꿈 -->
             앞으로의 운영에 참고가 될 예정이므로 정확히 작성 해 주시기 바랍니다.</p>
         </strong></center>
-    <form action="survey2.html" method="POST">
-        <fieldset><article><ol>
-            <h3><li>이전에 본교 기숙사(효민, 행복)에서 며칠 정도 생활하였습니까?</li></h3>
+    <form action="survey2.html" method="POST"> <!-- 이 페이지의 값을 survey2.html페이지에 POST방식으로 넘긴다. -->
+        <fieldset><article><ol> <!-- 설문 문항들을 폼 그룹으로 묶는다. 순서가 있는 목록을 만든다. -->
+            <!-- 첫번째 문항, 번호는 자동으로 매겨지므로 따로 작성하지 않는다. -->
+            <h3><li>이전에 본교 기숙사(효민, 행복)에서 며칠 정도 생활하였습니까?</li></h3> 
+            <!-- 라디오 버튼 타입 문항들을 만든다. 문항들 중 하나만 선택 가능하다. 변수이름은 live -->
             <input type="radio" name="live" value="1">이번이 처음이다.
             <input type="radio" name="live" value="2">1년 이하
             <input type="radio" name="live" value="3">1년 ~ 2년
             <input type="radio" name="live" value="4">2년 이상
             <p></p>
+            <!-- 두번째 문항, <ins>를 이용하여 중요 문장에는 밑줄을 친다. -->
             <h3><li>현재 거주기간을 선택해주세요 <ins>(반기,연간은 행복기숙사만 선택)</ins></li></h3>
+            <!-- 라디오 버튼 타입 문항들을 만든다. 변수이름은 period -->
             <input type="radio" name="period" value="1">학기(4개월)
             <input type="radio" name="period" value="2">반기(6개월)
             <input type="radio" name="period" value="3">연간(12개월)
             <input type="radio" name="period" value="4">방학 중 거주
             <p></p>
+            <!-- 세번째 문항 -->
             <h3><li>본교 기숙사의 첫인상은 어떠했습니까?</li></h3>
+            <!-- 라디오 버튼 타입 문항들을 만든다. 변수이름은 firstimpression,
+                "보통이다"문항에 checked를 사용하여 사용자가 선택하기 전에도 디폴트로 선택된다. -->
             <input type="radio" name="firstimpression" value="1">매우 별로다.
             <input type="radio" name="firstimpression" value="2">별로다.
             <input type="radio" name="firstimpression" value="3"checked>보통이다.
             <input type="radio" name="firstimpression" value="4">좋다.
             <input type="radio" name="firstimpression" value="5">매우 좋다.
             <p></p>
+            <!-- 네번째 문항 -->
             <h3><li>본교 기숙사의 현재 인상은 어떻습니까?</li></h3>
+            <!-- 라디오 버튼 타입 문항들을 만든다. 변수이름은 nowimpression -->
             <input type="radio" name="nowimpression" value="1">매우 별로다.
             <input type="radio" name="nowimpression" value="2">별로다.
             <input type="radio" name="nowimpression" value="3"checked>보통이다.
             <input type="radio" name="nowimpression" value="4">좋다.
             <input type="radio" name="nowimpression" value="5">매우 좋다.
             <p></p>
+            <!-- 다섯번째 문항 -->
             <h3><li>기숙사를 선택한 이유는 무엇입니까? <ins>(중복체크 가능)</ins></li></h3>
+            <!-- 체크박스 타입 문항들을 만든다. 문항들의 중복 선택이 가능하다. 변수이름은 reason
+                "기타"항목은 text 타입으로 생성하여 자유롭게 입력 가능하다. 입력창의 길이는 30px.
+                &nbsp; => 공백 문자이며, 입력창의 위치를 조절하기 위해 사용되었다. -->
             <input type="checkbox" name="reason" value="1">집이 학교에서 멀리 떨어져 있기 때문에
             <input type="checkbox" name="reason" value="2">시설이 좋기 때문에
             <input type="checkbox" name="reason" value="3">자취보다 가격이 싸기 때문에
@@ -55,25 +78,31 @@
             &nbsp;기타 : <input type="text" name="reason" size="30" value="">
             <center>
                 <p></p>
+                <!-- "다음"버튼을 누르면 위의 form에서 설정한 페이지에 값을 전송하고 그 페이지로 이동한다.
+                    "다시작성"버튼을 누르면 이때까지 작성했던 항목들이 디폴트 값으로 돌아간다. -->
                 <input type="submit" value="다음">
                 <input type="reset" value="다시작성">
             </center>
         </ol></article></fieldset>
         <p></p>
+        <!-- 설문 항목들과 밑의 정보들을 구분하기 위한 구분선,
+            너비는 3px, 그림자는 없으며 중앙에서부터 페이지 총 길이의 90%의 길이로 만들어진다. -->
         <hr size="3" align="center" width=90% noshade="noshade"></hr>
         <center>
             <p></p>
             <h5>설문조사 진행율</h5>
+            <!-- 설문조사의 진행률을 표시하는 태그, 총 3페이지 중 1페이지이므로 33% 진행되었다. -->
             <progress value="33" max="100" title="1/3">33%</progress>
             <p></p>
+            <!-- 기숙사 홈페이지로 돌아가는 하이퍼링크, 새 창이 띄워지는 것이 아니라 현재 창에서 바로 이동한다. -->
             <a href="https://dorm.deu.ac.kr/">홈페이지로 돌아가기</a>
         </center>
     </form>
-    <footer>
+    <footer> <!-- 사이트의 정보를 표시하는 꼬릿말 -->
         <p>
             <center>
-                <small>
-                    Copyright &copy; 2018 Hyoeun Lee
+                <small> <!-- 기본보다 글씨를 더 작게 만든다. -->
+                    Copyright &copy; 2018 Hyoeun Lee<!-- &copy; => 동그라미 안에 들어간 C모양의 특수문자 -->
                 </small>
             </center>
         </p>
