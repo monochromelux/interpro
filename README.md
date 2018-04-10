@@ -1,4 +1,4 @@
 # interpro
 internet programing homework
 
- https://monochromelux.github.io/interpro/survay/survay1.html
+ https://monochromelux.github.io/interpro/survey/survey1.html
