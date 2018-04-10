@@ -6,38 +6,54 @@
     <meta name="author" content="Lee Hyoeun">
 </head>
 <body>
-    <h2>
+    <h1>
         <center>
             <span style="background-color: #FFFF00;">
                 < 기숙사 만족도 설문조사 >
             </span>
         </center>
-    </h2>
+    </h1>
         <p></p>
         <strong><center>
-            <img src="dorm.JPG" title="생활관 이미지" align="center" width=20% height=10%> <br>
+            <img src="dorm.jpg" title="생활관 이미지" style="width:300px;height:200px">
             <p></p>
-            이 설문조사는 기숙사 관생들의 생활 만족도를 알아보기 위한 조사입니다. <br>
+            이 설문조사는 기숙사 관생들의 생활 만족도를 알아보기 위한 조사입니다.<br>
             앞으로의 운영에 참고가 될 예정이므로 정확히 작성 해 주시기 바랍니다.
             <p></p>
         </strong></center>
     <form action="survey2.html" method="POST">
         <fieldset>
+            <h3> - 본인의 학번을 입력해주세요.</h3>
+            <p><input type="text" name="name" size="15" value=""></p>
             <h3> 1. 이전에 본교 기숙사(효민, 행복)에서 며칠 정도 생활하였습니까?</h3>
-            <input type="radio" name="live" value="1" checked>이번이 처음이다.
-            <input type="radio" name="live" value="2">한 학기 ~ 1년
+            <input type="radio" name="live" value="1">이번이 처음이다.
+            <input type="radio" name="live" value="2">1년 이하
             <input type="radio" name="live" value="3">1년 ~ 2년
             <input type="radio" name="live" value="4">2년 이상
             <p></p>
             <h3> 2. 본교 기숙사의 첫인상은 어떠했습니까?</h3>
-            <input type="radio" name="firstimpression" value="1" checked>매우 별로다.
+            <input type="radio" name="firstimpression" value="1">매우 별로다.
             <input type="radio" name="firstimpression" value="2">별로다.
-            <input type="radio" name="firstimpression" value="3">보통이다.
+            <input type="radio" name="firstimpression" value="3"checked>보통이다.
             <input type="radio" name="firstimpression" value="4">좋다.
             <input type="radio" name="firstimpression" value="4">매우 좋다.
             <p></p>
+            <h3> 2-2. 그렇게 생각 한 이유는 무엇입니까?</h3>
+            <input type="radio" name="nowimpression" value="1">매우 별로다.
+            <input type="radio" name="nowimpression" value="2">별로다.
+            <input type="radio" name="nowimpression" value="3">보통이다.
+            <input type="radio" name="nowimpression" value="4">좋다.
+            <input type="radio" name="nowimpression" value="4">매우 좋다.
+            <p></p>
             <h3> 3. 본교 기숙사의 현재 인상은 어떻습니까?</h3>
-            <input type="radio" name="nowimpression" value="1" checked>매우 별로다.
+            <input type="radio" name="nowimpression" value="1">매우 별로다.
+            <input type="radio" name="nowimpression" value="2">별로다.
+            <input type="radio" name="nowimpression" value="3"checked>보통이다.
+            <input type="radio" name="nowimpression" value="4">좋다.
+            <input type="radio" name="nowimpression" value="4">매우 좋다.
+            <p></p>
+            <h3> 3-2. 그렇게 생각 한 이유는 무엇입니까?</h3>
+            <input type="radio" name="nowimpression" value="1">매우 별로다.
             <input type="radio" name="nowimpression" value="2">별로다.
             <input type="radio" name="nowimpression" value="3">보통이다.
             <input type="radio" name="nowimpression" value="4">좋다.
@@ -53,8 +69,9 @@
         <center>
             <p></p>
             <h5>설문조사 진행율</h5>
-            <progress value="33" max="100" title="진행율">33%</progress>
-            <br>
+            <progress value="33" max="100" title="1/3">33%</progress>
+            <p></p>
+            <a href="https://dorm.deu.ac.kr/">홈페이지로 돌아가기</a>
         </center>
     </form>
     <footer>

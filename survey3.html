@@ -6,13 +6,13 @@
     <meta name="author" content="Lee Hyoeun">
 </head>
 <body>
-    <h2>
+    <h1>
         <center>
             <span style="background-color: #FFFF00;">
                 < 기숙사 만족도 설문조사 >
             </span>
         </center>
-    </h2>
+    </h1>
     <form action="surveypost.html" method="POST">
         <fieldset>
             <h3> - 현재 어떤 기숙사에 살고 계십니까?</h3>
@@ -24,14 +24,27 @@
             </select>
             <p></p>
             <h3> - 성별은 무엇입니까?</h3>
-            <input type="radio" name="sex" value="male" checked>남자
+            <input type="radio" name="sex" value="male">남자
             <input type="radio" name="sex" value="female">여자
             <p></p>
             <h3> - 현재 몇 학년입니까?</h3>
-            <input type="radio" name="year" value="1" checked>1학년
+            <input type="radio" name="year" value="1">1학년
             <input type="radio" name="year" value="2">2학년
             <input type="radio" name="year" value="3">3학년
             <input type="radio" name="year" value="4">4학년
+            <p></p>
+            <h3> - 소속된 단과대학을 입력해주세요.</h3>
+            <input type="text" list="collegelist" name="college">
+            <datalist id="collegelist">
+                <option value="인문사회과학대학"></option>
+                <option value="상경대학"></option>
+                <option value="의료보건생활대학"></option>
+                <option value="한의과대학"></option>
+                <option value="IT융합부품소재공과대학"></option>
+                <option value="공과대학"></option>
+                <option value="ICT공과대학"></option>
+                <option value="예술디자인체육대학"></option>
+            </datalist>
             <p></p>
             <center>
                 <p></p>
@@ -44,8 +57,9 @@
         <center>
             <p></p>
             <h5>설문조사 진행율</h5>
-            <progress value="100" max="100" title="진행율">100%</progress>
-            <br>
+            <progress value="100" max="100" title="3/3">100%</progress>
+            <p></p>
+            <a href="https://dorm.deu.ac.kr/">홈페이지로 돌아가기</a>
         </center>
     </form>
     <footer>
